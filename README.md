@@ -23,13 +23,21 @@ Optionally you can pass true to show all connected USB HID Devices. This can be 
 
     require('busylight').devices(showUnsupported);
 
-###Events
+###Pressed Event
+The pressed event will fire whenever the main button on the headset is pressed
 
     headset.on('press', function() { //Call button pressed });
     
-###Methods
+###Light method
+Use this to control the light on the headset
 
     headset.light(on)
+
+###Close method
+Use this when you are done talking to the headset
+
+    headset.close();
+
 
 #Supports
 All USB Headsets with UC or Lync support should work, but only the following have been tested so far.
