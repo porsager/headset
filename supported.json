@@ -1,4 +1,17 @@
 [
-  { "product": "Jabra PRO 930" },
-  { "product": "Logitech H820e" }
+  { 
+    "identification": { "product": "Jabra PRO 930" },
+    "callButton": {
+      "position": 1,
+      "values": [1,9]
+    }
+  },
+  { "identification": { "product": "Logitech H820e" },
+    "callButton": {
+      "position": 1,
+      "values": [1]
+    },
+    "reportId": 2,
+    "light": { "on": 1, "off": 0 }
+  }
 ]
