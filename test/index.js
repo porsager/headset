@@ -1,5 +1,6 @@
 var Headset = require('../lib')
   , headset = Headset.get()
+  , interval
   , on = false;
 
 if(headset) {
@@ -8,10 +9,15 @@ if(headset) {
     console.log('pressed');
   });
 
-  setInterval(function(){
+  interval = setInterval(function(){
     headset.light(on);
     on = !on;
   }, 500);
+
+  setTimeout(function(){
+    clearInterval(interval);
+    headset.close();
+  }, 20000);
 
 } else {
 
