@@ -3,7 +3,7 @@ A node.js library for headsets.
 
 ## Install
     npm install headset
-[*extra steps for node-webkit][1]
+[*extra steps for node-webkit](#node-webkit)
 
 #Usage
 ###Get a headset
@@ -41,6 +41,5 @@ Currently testing is just to manually see if a headset works / can be found.
 ###Trying an unsupported headset
 If you want to try an unsupported headset just do npm test and follow the instructions. If a device is found that you can recognize, you can now use the details to manually .get(options) the headset. If you find a working device please report back here under issues or submit a pull request on supported.json.
 
-[1]: node-webkit
-###node-webkit
+###<a name="node-webkit"></a>Node-webkit
 Headset relies on node-hid. node-hid needs to be built for each platform, so to make it work you need to go to /headset/node_modules/node-hid and do a nw-gyp rebuild
