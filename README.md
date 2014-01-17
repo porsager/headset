@@ -50,4 +50,5 @@ Currently testing is just to manually see if a headset works / can be found.
 If you want to try an unsupported headset just do npm test and follow the instructions. If a device is found that you can recognize, you can now use the details to manually .get(options) the headset. If you find a working device please report back here under issues or submit a pull request on supported.json.
 
 ###<a name="node-webkit"></a>Node-webkit
-Headset relies on node-hid. node-hid needs to be built for each platform, so to make it work you need to go to /headset/node_modules/node-hid and do a nw-gyp rebuild
+Headset relies on node-hid. node-hid needs to be built for each platform and specific version of node-webkit, so to make it work you need build node-hid using nw-gyp
+https://github.com/rogerwang/node-webkit/wiki/Build-native-modules-with-nw-gyp
