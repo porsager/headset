@@ -13,20 +13,20 @@ A node.js library for headsets.
 Optionally pass you own options to find a head
 set
 
-    var busylight = require('busylight').get(options);
+    var headset = require('headset').get(options);
 
 ###Get all  headsets
 
-    require('busylight').devices();
+    require('headset').devices();
 
 Optionally you can pass true to show all connected USB HID Devices. This can be useful if the Headset is not detected, or if you are trying out this library with unsupported devices.
 
-    require('busylight').devices(showUnsupported);
+    require('headset').devices(showUnsupported);
 
 ###Pressed Event
 The pressed event will fire whenever the main button on the headset is pressed
 
-    headset.on('press', function() { //Call button pressed });
+    headset.on('pressed', function() { //Call button pressed });
     
 ###Light method
 Use this to control the light on the headset
