@@ -10,8 +10,8 @@ if(headset) {
     console.log('accept event');
   });
 
-  if(headset.call) {
-    headset.call();
+  if(headset.ring) {
+    headset.ring();
     setTimeout(function(){
       headset.connect();
       setTimeout(function(){

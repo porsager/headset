@@ -8,7 +8,7 @@
     "write": {
       "connect": "0201",
       "disconnect": "0200",
-      "call": "0208"
+      "ring": "0208"
     }
   },
   { 
