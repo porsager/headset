@@ -1,18 +1,31 @@
 var Headset = require('../lib')
   , headset = Headset.get()
   , interval
-  , on = false;
+;
 
 if(headset) {
 
-  headset.on('pressed', function(){
-    console.log('pressed');
+  headset.debug = true;
+  headset.on('accept', function(){
+    console.log('accept event');
   });
 
-  interval = setInterval(function(){
-    headset.light(on);
-    on = !on;
-  }, 500);
+  if(headset.call) {
+    headset.call();
+    setTimeout(function(){
+      headset.connect();
+      setTimeout(function(){
+        headset.disconnect();
+      }, 4000);
+    }, 4000);
+  }
+
+  if(headset.lightOn) {
+    headset.lightOn();
+    setTimeout(function(){
+      headset.lightOff();
+    }, 8000);
+  }
 
   setTimeout(function(){
     clearInterval(interval);
@@ -32,8 +45,9 @@ if(headset) {
       return console.log(e);
     }
 
-    headset.on('pressed', function(){
-      console.log('Press event gotten for: ');
+    headset.debug = true;
+    headset.on('accept', function(){
+      console.log('Accept event gotten for: ');
       console.log(device);
     });
 

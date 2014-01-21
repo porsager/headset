@@ -1,17 +1,29 @@
 [
   { 
+    "identification": { "product": "Jabra PRO 9470" },
+    "read": {
+      "accept": [ "020100" ],
+      "reject": [ "020110" ]
+    },
+    "write": {
+      "connect": "0201",
+      "disconnect": "0200",
+      "call": "0208"
+    }
+  },
+  { 
     "identification": { "product": "Jabra PRO 930" },
-    "callButton": {
-      "position": 1,
-      "values": [1,9]
+    "read": {
+      "accept": [ "020100", "020109" ]
     }
   },
   { "identification": { "product": "Logitech H820e" },
-    "callButton": {
-      "position": 1,
-      "values": [1]
+    "read": {
+      "accept": [ "020100" ]
     },
-    "reportId": 2,
-    "light": { "on": 1, "off": 0 }
+    "write": {
+      "lightOn": "020100",
+      "lightOff": "020000"
+    }
   }
 ]
