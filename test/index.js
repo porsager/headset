@@ -3,8 +3,13 @@ var Headset = require('../lib')
   , interval
 ;
 
-if(headset) {
+headset.once('connected', function(){
 
+  headset.on('error', function(err){
+    console.log(err);
+  });
+  console.log('Headset found');
+  console.log(headset.options);
   headset.debug = true;
   headset.on('accept', function(){
     console.log('accept event');
@@ -32,8 +37,11 @@ if(headset) {
     headset.close();
   }, 20000);
 
-} else {
+});
 
+headset.on('error', function(err){
+
+  console.log(err);
   console.log('no supported headset found - trying sweep');
 
   Headset.devices(true).forEach(function(device){
@@ -59,5 +67,7 @@ if(headset) {
 
   console.log('please press the headset call button and see if corresponding events appear');
   console.log('disconnecting devices in 20 seconds');
-}
+
+});
+
 

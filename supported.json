@@ -14,7 +14,7 @@
   { 
     "identification": { "product": "Jabra PRO 930" },
     "read": {
-      "accept": [ "020100", "020109" ]
+      "accept": [ "020100", "020900", "020109" ]
     }
   },
   { "identification": { "product": "Logitech H820e" },
