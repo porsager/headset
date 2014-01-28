@@ -10,8 +10,7 @@ A node.js library for headsets.
 
     var headset = require('headset').get()
 
-Optionally pass you own options to find a head
-set
+Optionally pass you own options to find a headset
 
     var headset = require('headset').get(options);
 
@@ -24,12 +23,32 @@ Optionally you can pass true to show all connected USB HID Devices. This can be 
     require('headset').devices(showUnsupported);
 
 ###Events
-You can listen to events specified in device configuration. (see supported.json)
+####connected
+The connected event fires every time a headset connection is made. This will also fire after a automatic / manual reconnect.
+
+    headset.on('connected', function(){
+        // it is now safe to write to the headset
+    });
+
+    headset.once // use this for code that should only run on the next connect (initialization)
+
+####disconnected
+
+    headset.on('error', function(err){
+        // err contains details
+    });
+
+####Headset specific events
+You can also listen to events specified in device configuration. (see supported.json)
 
     headset.on('accept', function() { //Call accepted });
   
 ###Methods
-Methods specficified in a device configuration are available to use. (see supported.json)
+####Connect
+The connect method gives you the ability to issue a manual connect. This is done automatically the first time (when you get the headset).
+
+####Headset specific methods
+Methods specficified in a device configuration are also available to use. (see supported.json)
 If you are unsure which headset is attached and if it supports a certain method, then check if it exists first.
 
     if(headset.lightOn)

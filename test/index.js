@@ -3,16 +3,19 @@ var Headset = require('../lib')
   , interval
 ;
 
-headset.once('connected', function(){
+headset.debug = true;
 
-  headset.on('error', function(err){
+headset.on('accept', function(){
+  console.log('accept event');
+});
+
+headset.on('connected', function(){
+
+  headset.removeListener('disconnected', sweep);
+
+  console.log(headset.config);
+  headset.on('error', function(err) {
     console.log(err);
-  });
-  console.log('Headset found');
-  console.log(headset.options);
-  headset.debug = true;
-  headset.on('accept', function(){
-    console.log('accept event');
   });
 
   if(headset.ring) {
@@ -39,21 +42,18 @@ headset.once('connected', function(){
 
 });
 
-headset.on('error', function(err){
-
-  console.log(err);
+function sweep() {
   console.log('no supported headset found - trying sweep');
 
   Headset.devices(true).forEach(function(device){
     var headset;
 
-    try {
-      headset = Headset.get({ path: device.path });
-    } catch(e) {
-      return console.log(e);
-    }
-
+    headset = Headset.get({ path: device.path });
+    
     headset.debug = true;
+    headset.on('disconnected', function(err){
+      console.log(err);
+    });
     headset.on('accept', function(){
       console.log('Accept event gotten for: ');
       console.log(device);
@@ -67,7 +67,8 @@ headset.on('error', function(err){
 
   console.log('please press the headset call button and see if corresponding events appear');
   console.log('disconnecting devices in 20 seconds');
+}
 
-});
+headset.once('disconnected', sweep);
 
-
+setTimeout(function(){}, 20000);

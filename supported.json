@@ -19,7 +19,7 @@
   },
   { "identification": { "product": "Logitech H820e" },
     "read": {
-      "accept": [ "020100" ]
+      "accept": [ "020100", "020000" ]
     },
     "write": {
       "lightOn": "020100",
