@@ -6,15 +6,20 @@
       "reject": [ "020110" ]
     },
     "write": {
-      "connect": "0201",
-      "disconnect": "0200",
-      "ring": "0208"
+      "activate": "020100",
+      "deactivate": "020000",
+      "ring": "020800"
     }
   },
   { 
     "identification": { "product": "Jabra PRO 930" },
     "read": {
-      "accept": [ "020100", "020900", "020109" ]
+      "accept": [ "020100", "022A00" ]
+    },
+    "write": {
+      "activate": "021000",
+      "deactivate": "020000",
+      "ring": "021800"
     }
   },
   { "identification": { "product": "Logitech H820e" },
