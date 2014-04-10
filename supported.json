@@ -3,7 +3,7 @@
     "identification": { "product": "Jabra PRO 9470" },
     "read": {
       "accept": [ "020100" ],
-      "reject": [ "020110" ]
+      "reject": [ "020A00" ]
     },
     "write": {
       "activate": "020100",
@@ -14,7 +14,8 @@
   { 
     "identification": { "product": "Jabra PRO 930" },
     "read": {
-      "accept": [ "020100", "022A00" ]
+      "accept": [ "020100" ],
+      "reject": [ "022A00" ]
     },
     "write": {
       "activate": "021000",
