@@ -15,12 +15,12 @@
     "identification": { "product": "Jabra PRO 9450" },
     "read": {
       "accept": [ "020100" ],
-      "reject": [ "020A00" ]
+      "reject": [ "022A00" ]
     },
     "write": {
-      "activate": "020100",
+      "activate": "021000",
       "deactivate": "020000",
-      "ring": "020800"
+      "ring": "021800"
     }
   },
   { 
