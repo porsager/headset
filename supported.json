@@ -43,5 +43,14 @@
       "lightOn": "020100",
       "lightOff": "020000"
     }
+  },
+  { "identification": { "product": "BUA-200M" },
+    "read": {
+      "accept": [ "0101" ]
+    },
+    "write": {
+      "ring": "0201",
+      "deactivate": "0200"
+    }
   }
 ]
