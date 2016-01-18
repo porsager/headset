@@ -1,6 +1,6 @@
 {
   "name": "headset",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "node library for headsets",
   "main": "./lib/index.js",
   "author": {
