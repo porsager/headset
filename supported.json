@@ -1,5 +1,5 @@
 [
-  { 
+  {
     "identification": { "product": "Jabra PRO 9470" },
     "read": {
       "accept": [ "020100" ],
@@ -23,7 +23,7 @@
       "ring": "021800"
     }
   },
-  { 
+  {
     "identification": { "product": "Jabra PRO 930" },
     "read": {
       "accept": [ "020100" ],
