@@ -24,7 +24,7 @@
     "hid"
   ],
   "dependencies": {
-    "node-hid": "0.5.1"
+    "node-hid": "0.5.x"
   },
   "homepage": "https://github.com/porsager/headset",
   "bugs": {
