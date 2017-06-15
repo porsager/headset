@@ -52,5 +52,31 @@
       "ring": "0201",
       "deactivate": "0200"
     }
-  }
+  },
+  {
+    "identification": { "product": "Jabra PRO 935" },
+    "read": {
+      "accept": [ "020300" ],
+      "reject": [ "020600" ]
+    },
+    "write": {
+      "activate": "022100",
+      "deactivate": "020000",
+      "ring": "024400"
+    }
+  },
+  {
+    "identification": { "product": "Plantronics D100" },
+    "read": {
+      "accept": [ "0201" ],
+      "reject": [ "0200" ]
+    },
+    "write": {
+      "activate": "1701",
+      "deactivate": "1700",
+      "ring": "1801",
+      "ringOff": "1800"
+    }
+  },
+
 ]
