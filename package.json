@@ -1,6 +1,6 @@
 {
   "name": "headset",
-  "version": "0.2.17",
+  "version": "0.3.0",
   "description": "node library for headsets",
   "main": "./lib/index.js",
   "author": {
@@ -24,7 +24,7 @@
     "hid"
   ],
   "dependencies": {
-    "node-hid": "0.5.x"
+    "node-hid": "1.1.x"
   },
   "homepage": "https://github.com/porsager/headset",
   "bugs": {
