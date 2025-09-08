@@ -24,14 +24,14 @@
     "hid"
   ],
   "dependencies": {
-    "node-hid": "2.1.1"
+    "node-hid": "3.2.0"
   },
   "homepage": "https://github.com/porsager/headset",
   "bugs": {
     "url": "https://github.com/porsager/headset/issues"
   },
   "scripts": {
-    "test": "echo Requires headset"
+    "test": "echo 'disabled for now - no device to test with'"
   },
   "license": "MIT"
 }
